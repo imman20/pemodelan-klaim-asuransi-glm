@@ -208,4 +208,3 @@ interpretasi serta interval. Split acak tunggal belum menguji generalisasi antar
 Saya hanya melatih sampel polis yang didokumentasikan; audit skema dan kualitas menggunakan
 data sumber penuh. Studi ini merupakan portofolio dan belum menjadi tarif siap pakai
 untuk perusahaan asuransi.
-
