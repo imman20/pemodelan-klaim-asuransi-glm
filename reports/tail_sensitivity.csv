@@ -1,0 +1,5 @@
+train_quantile,train_limit,train_claims_above,test_claims_above,test_total_limited_cost
+0.95,4820.325,155,38,1055031.81
+0.99,18056.01699999989,31,6,1226790.7319999994
+1.0,1403057.4,0,0,1323503.02
+unlimited,,0,0,1323503.02

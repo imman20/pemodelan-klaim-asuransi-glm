@@ -1,0 +1,128 @@
+{
+  "seed": 2024,
+  "sampling_rule": "simple random sample of policy IDs before 80:20 split",
+  "requested_max_policies": 100000,
+  "sample_policies": 100000,
+  "train_policies": 80000,
+  "test_policies": 20000,
+  "train_claim_rows": 3091,
+  "test_claim_rows": 800,
+  "overlap_policy_ids": 0,
+  "audit": {
+    "raw_policies": 678013,
+    "raw_claim_rows": 26639,
+    "duplicate_policy_ids": 0,
+    "exact_duplicate_claim_rows": 255,
+    "invalid_exposure_rows": 0,
+    "exposure_above_one_rows": 1224,
+    "nonpositive_claim_rows": 0,
+    "missing_cells_freq": 0,
+    "missing_cells_sev": 0,
+    "severity_ids_absent_from_frequency": 195,
+    "severity_unique_ids_absent": 6,
+    "count_mismatch_policies": 9117,
+    "frequency_claim_total": 36102,
+    "matched_positive_claim_total": 26444,
+    "positive_claim_frequency_zero_policies": 0
+  },
+  "train_cap_q99": 18056.01699999989,
+  "train_pearson_dispersion": 2.8672040593351737,
+  "nb2_alpha_train_moments": 0.8462319926020041,
+  "poisson_train_aic": 33739.49143565665,
+  "nb_train_aic_fixed_alpha": 33632.13697300472,
+  "nb_train_aic_plus_alpha_parameter": 33634.13697300472,
+  "references": {
+    "Area": "A",
+    "VehGas": "Diesel",
+    "Region": "R11",
+    "VehBrand": "B1"
+  },
+  "numeric_sd_train": {
+    "VehPower": 2.0576105240287212,
+    "VehAge": 5.678356782212065,
+    "DrivAge": 14.14522535362529,
+    "BonusMalus": 15.6303683613023,
+    "log_density": 1.8609970697931735
+  },
+  "frequency_evaluation": [
+    {
+      "model": "Poisson GLM",
+      "test_count_poisson_deviance": 0.33492758939270745,
+      "test_nb2_deviance_at_train_alpha": 0.29664773793423793,
+      "test_exposure_weighted_rate_deviance": 0.6331532716683553,
+      "actual_claims": 1114,
+      "predicted_claims": 1073.5791804097842,
+      "count_calibration_ratio": 0.9637156018041151
+    },
+    {
+      "model": "NB2 GLM",
+      "test_count_poisson_deviance": 0.3349336000661821,
+      "test_nb2_deviance_at_train_alpha": 0.2966300932046006,
+      "test_exposure_weighted_rate_deviance": 0.6331646343559808,
+      "actual_claims": 1114,
+      "predicted_claims": 1085.4053818056814,
+      "count_calibration_ratio": 0.974331581513179
+    },
+    {
+      "model": "Gradient boosting",
+      "test_count_poisson_deviance": 0.3195757321700834,
+      "test_nb2_deviance_at_train_alpha": 0.2817847715056536,
+      "test_exposure_weighted_rate_deviance": 0.6041318385749683,
+      "actual_claims": 1114,
+      "predicted_claims": 1077.3095139340267,
+      "count_calibration_ratio": 0.9670641956319809
+    }
+  ],
+  "severity_evaluation": [
+    {
+      "target": "limited",
+      "test_claim_rows": 800,
+      "gamma_deviance": 1.05377021960783,
+      "actual_mean": 1533.4884149999991,
+      "predicted_mean": 1630.0526320864424,
+      "train_aic": 52987.68122941363
+    },
+    {
+      "target": "unlimited",
+      "test_claim_rows": 800,
+      "gamma_deviance": 1.3971024758034556,
+      "actual_mean": 1654.3787750000001,
+      "predicted_mean": 2342.0374739603903,
+      "train_aic": 62790.046894119325
+    }
+  ],
+  "test_exposure": 10579.668600943183,
+  "test_actual_limited_cost": 1226790.7319999994,
+  "test_predicted_limited_cost": 1740362.670814692,
+  "test_limited_cost_calibration_ratio": 1.4186304358343431,
+  "test_boost_predicted_limited_cost": 1741332.4473368358,
+  "test_actual_unlimited_cost": 1323503.02,
+  "test_predicted_unlimited_cost": 2484115.5586001594,
+  "train_claim_cost_removed_by_cap": 2598338.103000003,
+  "test_claim_cost_removed_by_cap": 96712.28800000066,
+  "all_glm_converged": true,
+  "gamma_optimization": {
+    "gamma_limited": {
+      "method": "trust-exact on mean(eta + y_scaled*exp(-eta)), then IRLS",
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully.",
+      "optimizer_iterations": 4,
+      "max_absolute_gradient": 2.425137035004621e-12,
+      "max_absolute_gradient_after_irls": 1.4694780494337468e-12
+    },
+    "gamma_unlimited": {
+      "method": "trust-exact on mean(eta + y_scaled*exp(-eta)), then IRLS",
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully.",
+      "optimizer_iterations": 5,
+      "max_absolute_gradient": 2.1632493346870234e-09,
+      "max_absolute_gradient_after_irls": 3.5036860153875412e-09
+    }
+  },
+  "glm_iterations": {
+    "poisson": 7,
+    "nb": 8,
+    "gamma_limited": 1,
+    "gamma_unlimited": 1
+  }
+}

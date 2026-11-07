@@ -1,0 +1,16 @@
+{
+  "reports/double_lift.csv": "e598cb6132d89248046cb843aa0925bf82705e63096df467bbfd60ef89d4ac8d",
+  "reports/eda_rates.csv": "4758fbe1547a0fd8d2b002ab9ed70582d003842a411b81eb43cda08bceb72647",
+  "reports/evaluation.csv": "ba847d7e864cedd580d05c168069f1bbb61482131078f178f0fba614825595a3",
+  "reports/hasil.json": "30e4ef3674e978ba7cafdf1799ae3d70e1b372b9265a65f44d2fedc6b405ca90",
+  "reports/laporan_analisis.md": "472c8c9df13c86f9932ca0c85dbe749baa4ef9c161cefc73bf4d617e6749a768",
+  "reports/lift.csv": "8991f3ca6c434c20bea06a685578ad32345776e0069e59df26c5540b9e40db23",
+  "reports/relativities.csv": "38c8e3b46afa6615a50b7ac051c8a87d6fc70793cb69dbd00fbcb8ecfe127337",
+  "reports/severity_evaluation.csv": "178a434205fdb2c603c19c398c53c6953ff170e9125e5527d0afb27756bce9ce",
+  "reports/source.json": "0fc24ce5b32081a07916f9406fa6d89bcd4da6141a9e3cca7ff2fa64f809ad1e",
+  "reports/split.csv": "b7bef7bb0e815a88d4d2415eb96704e055d5619c89ca0e90ff3f46c7fc0d0065",
+  "reports/tail_sensitivity.csv": "fea9e09d18205204f366de0f4623da3808ec634af371a31558f7bd190e5a1904",
+  "reports/test_predictions.csv": "b3cb4c503072b24f0388e310d0dcd878ec28b5f9045b8818c26ea393332846eb",
+  "assets/frequency_area.png": "cbeb3adf547d8957a7601f8eb4c8b4b6ef6ceb42afbddb085916df6e5b09747d",
+  "assets/lift.png": "df6e1ed601cea818d506ffcbb597db5a81cd53b4f46930da6bff876a1608baec"
+}
